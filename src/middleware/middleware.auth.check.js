@@ -11,7 +11,7 @@ export const auth_check = (req,res, next) => {
     }
     const decoded = jwt.verify(token, process.env.JWT_STRING);
     if(!decoded){
-        return res.status(401).json({message: 'Unauthorized'});
+        return res.status(401).json({message: 'Unauthorized...'});
     }
     req.user = decoded;
     next();
