@@ -50,7 +50,7 @@ export const  login = async(req,res)=>{
         res.cookie('accesstoken', signedJWT, {
            httpOnly: true,
            secure: process.env.NODE_ENV === 'production',
-           sameSite: 'strict',
+           sameSite: 'none',
            maxAge: 20 * 60 * 1000
    
        });
